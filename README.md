@@ -14,7 +14,7 @@
 
 Harmony Bridge 由 **Mac 客户端**和**鸿蒙手机端**组成。当前版本首先面向 HUAWEI Mate 80 Pro Max（HarmonyOS 7 / API 26）与 Apple 芯片 Mac 的个人使用场景。手机桌面图标名称为 **Bridge**。
 
-> 📱 **手机端尚未上架华为应用市场，不能从商店安装；目前必须侧载。** 手机需要开启开发者模式和 USB 调试，再通过 DevEco Studio 或 HDC 安装已签名的 HAP。调试签名与注册设备绑定：一台手机可安装的测试包，不代表其他鸿蒙手机也能安装。其他设备应使用本仓库的 `Phone/` 工程为自己的设备重新签名构建。详见[手机端安装说明](docs/PHONE_INSTALL.md)。
+> 📱 **手机端尚未上架华为应用市场，不能从商店安装；目前必须侧载。** [下载手机 HAP](https://github.com/chinachenkeke-source/harmony-bridge/releases/download/v1.0.0/HarmonyBridge-phone-v1.0.0-debug-device-bound.hap)仅适用于其签名 Profile 中已注册的调试设备，包内含该设备的 ID。其他鸿蒙手机应使用本仓库的 `Phone/` 工程为自己的设备重新签名构建。详见[手机端安装说明](docs/PHONE_INSTALL.md)。
 
 ## ✨ 功能一览
 
@@ -37,7 +37,7 @@ Harmony Bridge 由 **Mac 客户端**和**鸿蒙手机端**组成。当前版本�
 
 ### 安装手机端（侧载）
 
-手机端 **Bridge** 不是商店应用。请按[手机端安装说明](docs/PHONE_INSTALL.md)，在 DevEco Studio 中打开 `Phone/` 工程，为你的设备配置调试签名并安装；已有适用于该设备的签名 HAP 时，也可以用 HDC 侧载。安装完成后再进行下列投屏步骤。
+手机端 **Bridge** 不是商店应用。已注册的调试设备可从 [Releases](../../releases) 下载 `HarmonyBridge-phone-v1.0.0-debug-device-bound.hap`，用 HDC 侧载；其他设备请按[手机端安装说明](docs/PHONE_INSTALL.md)，在 DevEco Studio 中打开 `Phone/` 工程，为自己的设备配置调试签名并安装。安装完成后再进行下列投屏步骤。
 
 ### 用数据线投屏
 
