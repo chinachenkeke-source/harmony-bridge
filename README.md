@@ -14,6 +14,8 @@
 
 Harmony Bridge 由 **Mac 客户端**和**鸿蒙手机端**组成。当前版本首先面向 HUAWEI Mate 80 Pro Max（HarmonyOS 7 / API 26）与 Apple 芯片 Mac 的个人使用场景。手机桌面图标名称为 **Bridge**。
 
+> 📱 **手机端尚未上架华为应用市场，不能从商店安装；目前必须侧载。** 手机需要开启开发者模式和 USB 调试，再通过 DevEco Studio 或 HDC 安装已签名的 HAP。调试签名与注册设备绑定：一台手机可安装的测试包，不代表其他鸿蒙手机也能安装。其他设备应使用本仓库的 `Phone/` 工程为自己的设备重新签名构建。详见[手机端安装说明](docs/PHONE_INSTALL.md)。
+
 ## ✨ 功能一览
 
 | 功能 | 当前实现 |
@@ -33,9 +35,13 @@ Harmony Bridge 由 **Mac 客户端**和**鸿蒙手机端**组成。当前版本�
 2. 一台 Mac，安装 **DevEco Studio / HDC**。Mac 客户端默认查找 `/Applications/DevEco-Studio.app/Contents/sdk/default/openharmony/toolchains/hdc`，也可在应用中指定 HDC 路径。
 3. 在手机开发者选项中开启 USB 调试。首次连接时，在手机上允许这台电脑调试。
 
+### 安装手机端（侧载）
+
+手机端 **Bridge** 不是商店应用。请按[手机端安装说明](docs/PHONE_INSTALL.md)，在 DevEco Studio 中打开 `Phone/` 工程，为你的设备配置调试签名并安装；已有适用于该设备的签名 HAP 时，也可以用 HDC 侧载。安装完成后再进行下列投屏步骤。
+
 ### 用数据线投屏
 
-1. 从 [Releases](../../releases) 下载 `HarmonyBridge-Mac.zip`，解压并打开 `HarmonyBridge.app`；或按下文从源码构建。
+1. 从 [Releases](../../releases) 下载 `HarmonyBridge-Mac-v1.0.0.zip`，解压并打开 `HarmonyBridge.app`；或按下文从源码构建。
 2. 使用 USB 数据线连接手机，解锁并允许 USB 调试。
 3. 打开手机端 **Bridge**，点击“开启屏幕共享”，在系统提示中允许共享整个屏幕。
 4. Mac 会自动接入画面。授权后可返回手机桌面继续使用。
@@ -64,7 +70,7 @@ Tests/     真机连接及传输验证脚本
 build.sh   Mac 构建脚本
 ```
 
-在仓库根目录运行 `zsh build.sh`，需要 Apple 命令行开发工具；生成的 `HarmonyBridge.app` 位于仓库根目录。手机工程请用 **DevEco Studio** 打开 `Phone/`，安装项目依赖，配置**你自己的调试签名**，然后构建并安装 HAP。仓库不包含签名证书、密码、私钥或设备专用的调试 HAP。
+在仓库根目录运行 `zsh build.sh`，需要 Apple 命令行开发工具；生成的 `HarmonyBridge.app` 位于仓库根目录。手机工程请用 **DevEco Studio** 打开 `Phone/`，安装项目依赖，配置**你自己的调试签名**，然后构建并侧载 HAP。Git 源码仓库不包含签名证书、密码或私钥。
 
 ## ⚠️ 已知边界
 

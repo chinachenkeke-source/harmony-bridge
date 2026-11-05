@@ -17,5 +17,6 @@
 - 目前主要验证 Mate 80 Pro Max 的竖屏场景；横屏触控坐标尚未验证。
 - 不包含系统音频转发、麦克风接管、自动剪贴板同步和断点续传。
 - 实际帧率不保证每秒都达到 60 帧；手机端需要系统屏幕共享授权。
+- 手机端未上架华为应用市场，只能侧载；调试签名 HAP 仅适用于其 Profile 注册的设备。
 
 [1.0.0]: https://github.com/chinachenkeke-source/harmony-bridge/releases/tag/v1.0.0
