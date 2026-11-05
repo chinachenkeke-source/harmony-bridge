@@ -1,0 +1,11 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "Harmony Bridge phone companion",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "libbridge.so": "file:./src/main/cpp/types/libbridge"
+  }
+}

@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.5.0)
+project(HarmonyBridge)
+set(CMAKE_CXX_STANDARD 17)
+if(DEFINED PACKAGE_FIND_FILE)
+include(${PACKAGE_FIND_FILE})
+endif()
+add_library(bridge SHARED bridge.cpp)
+target_link_libraries(bridge PUBLIC libace_napi.z.so libnative_avscreen_capture.so libnative_media_codecbase.so libnative_media_core.so libnative_media_venc.so libnative_window.so libhilog_ndk.z.so)

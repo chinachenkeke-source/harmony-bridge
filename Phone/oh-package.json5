@@ -1,0 +1,8 @@
+{
+  "modelVersion": "6.0.0",
+  "name": "harmonybridge",
+  "version": "1.0.0",
+  "description": "Personal Mac-Harmony bridge",
+  "dependencies": {},
+  "devDependencies": {}
+}
